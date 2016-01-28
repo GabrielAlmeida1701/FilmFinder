@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/fundo_film2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nenhum filme encontrado!"
+        android:id="@+id/MovieTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/White" />
+
+    <ImageView
+        android:layout_width="@dimen/Poster_horizontal"
+        android:layout_height="@dimen/Poster_vertical"
+        android:id="@+id/Poster"
+        android:layout_below="@+id/MovieTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/nonposter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Lançamento"
+        android:id="@+id/Year_Label"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/Poster"
+        android:layout_toEndOf="@+id/Poster"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/Gray" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="-- --- ----"
+        android:id="@+id/Year"
+        android:layout_below="@+id/Year_Label"
+        android:layout_alignStart="@+id/Year_Label"
+        android:textColor="@color/White" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Diretor"
+        android:id="@+id/Director_Label"
+        android:textSize="15dp"
+        android:layout_below="@+id/Year"
+        android:layout_alignStart="@+id/Year"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/Gray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="-------"
+        android:id="@+id/Director"
+        android:layout_below="@+id/Director_Label"
+        android:layout_alignStart="@+id/Director_Label"
+        android:textColor="@color/White" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Atores"
+        android:id="@+id/Actors_Label"
+        android:textSize="15dp"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/Director"
+        android:layout_alignStart="@+id/Director"
+        android:textColor="@color/Gray" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="-------"
+        android:id="@+id/Actors"
+        android:textSize="17dp"
+        android:layout_below="@+id/Actors_Label"
+        android:layout_alignStart="@+id/Actors_Label"
+        android:layout_alignBottom="@+id/Poster"
+        android:textColor="@color/White" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Genero"
+        android:id="@+id/Genre_Label"
+        android:textSize="15dp"
+        android:layout_below="@+id/Actors"
+        android:layout_alignStart="@+id/Actors"
+        android:textColor="@color/Gray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="-------"
+        android:id="@+id/Genre"
+        android:layout_below="@+id/Genre_Label"
+        android:layout_alignStart="@+id/Genre_Label"
+        android:layout_alignEnd="@+id/Actors"
+        android:textColor="@color/White" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sinopse"
+        android:id="@+id/Plot_Label"
+        android:textSize="15dp"
+        android:layout_below="@+id/Genre"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/Gray" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="-------"
+        android:id="@+id/Plot"
+        android:textSize="18dp"
+        android:textColor="@color/White"
+        android:layout_below="@+id/Plot_Label"
+        android:layout_alignParentEnd="true" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RatingBar"
+        android:numStars="10"
+        android:progressTint="@color/Red"
+        android:rating="10"
+        style="?android:attr/ratingBarStyleIndicator"
+        android:layout_below="@+id/Plot"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
